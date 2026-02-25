@@ -8,6 +8,7 @@ export class LoginPage extends BasePage {
   readonly username: Locator;
   readonly password: Locator;
   readonly loginBtn: Locator;
+   readonly checkBox: Locator;
   readonly productsTitle: Locator;
   readonly errorMsg : Locator;
   
@@ -22,15 +23,18 @@ export class LoginPage extends BasePage {
     this.username = page.locator('#user-name');
     this.password = page.locator('#password');
     this.loginBtn = page.locator('#login-button');
+    this.checkBox = page.locator('#check-box');
     this.productsTitle = page.locator('span.title:has-text("Products")');
     this.errorMsg = page.getByText("Epic sadface: Username and password do not match any user in this service");
   }
+
 
   //TypeScript je tipiziran tako da moramo navesti kog tipa su user i pass
   //Za async funkcije nema void ako ne vraća nijedan tip podatka
   async login(user: string, pass: string) {
     await this.username.fill(user);
     await this.password.fill(pass);
+    // await this.checkBox.fill(pass);   
     await this.loginBtn.click();
   }
 
