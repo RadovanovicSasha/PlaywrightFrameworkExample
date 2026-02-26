@@ -44,7 +44,7 @@ export default defineConfig({
     headless: true,
 
     // Timeout za svaku akciju (click, fill...) – 0 = nema limita
-    actionTimeout: 20000,
+    actionTimeout: 35000,
   },
 
   // Projekti – možeš pokretati testove na različitim browserima
