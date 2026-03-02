@@ -3,7 +3,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  schedule:
+  # schedule:
   # - cron: '0 7 * * *'   # 08:00 Beograd (zimsko vreme)
 jobs:
   test:
